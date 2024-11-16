@@ -1,32 +1,46 @@
 body {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     height: 100vh;
     margin: 0;
 }
 
-.container {
+#container {
     display: flex;
-    justify-content: center;
     align-items: center;
-    /* ここで要素をセンターに配置 */
 }
 
-canvas {
+#polygonCanvas {
+    margin-top: 150px;
+    /* 上マージンをさらに増加 */
     margin-right: 20px;
-    /* キャンバスの右にマージンを追加 */
-    border: 1px solid black;
+    /* スライダーとキャンバスの間のスペース */
 }
 
-.controls {
+#controls {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    margin-left: 20px;
-    /* スライダーをキャンバスの右に配置 */
 }
 
-.controls>div {
+.control-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#sidesSlider {
+    width: 200px;
+    /* スライダーの長さを調整 */
+    margin-right: 10px;
+    /* ボタンとの間隔を調整 */
+}
+
+#drawButton {
+    margin-left: 10px;
+    /* ボタンの位置を調整 */
+}
+
+#piValues {
     margin-top: 20px;
 }

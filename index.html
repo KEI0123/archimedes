@@ -1,18 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 
 <head>
-    <title>Archimedes</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多角形描画</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <div class="container"> <canvas id="canvas" width="800" height="800"></canvas>
-        <div class="controls"> <label for="slider">Number of Sides for Polygons:</label> <input type="range" id="slider"
-                min="3" max="100" value="3"> <span id="sliderValue">3</span> <button id="drawButton">Draw
-                Polygons</button>
-            <div>
-                <p>円周率の範囲: <span id="piRange"></span></p>
+    <div id="container">
+        <canvas id="polygonCanvas" width="800" height="800"></canvas>
+        <div id="controls">
+            <h1>Archimedes</h1>
+            <label for="sidesSlider">多角形の辺の数: </label>
+            <div class="control-group">
+                <input type="range" id="sidesSlider" min="3" max="100" value="3" step="1">
+                <span id="sidesValue">3</span>
+                <button id="drawButton">描画</button>
+            </div>
+            <div id="piValues">
+                <p id="inscribedPiValue">内接多角形: 計算中...</p>
+                <p id="circumscribedPiValue">外接多角形: 計算中...</p>
+                <p id="piInequality">x &lt; π &lt; y</p>
             </div>
         </div>
     </div>
