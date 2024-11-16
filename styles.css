@@ -1,6 +1,8 @@
 body {
     display: flex;
     justify-content: flex-start;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
     align-items: center;
     height: 100vh;
     margin: 0;
@@ -14,13 +16,12 @@ body {
 #polygonCanvas {
     margin-top: 150px;
     /* 上マージンをさらに増加 */
-    margin-right: 20px;
-    /* スライダーとキャンバスの間のスペース */
 }
 
 #controls {
     display: flex;
     flex-direction: column;
+    margin-bottom: 50px;
 }
 
 .control-group {
@@ -30,15 +31,22 @@ body {
 }
 
 #sidesSlider {
-    width: 200px;
-    /* スライダーの長さを調整 */
+    width: 300px;
     margin-right: 10px;
-    /* ボタンとの間隔を調整 */
 }
 
 #drawButton {
     margin-left: 10px;
-    /* ボタンの位置を調整 */
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    background-color: rgb(255, 187, 0);
+}
+
+#drawButton:hover {
+    background-color: rgb(255, 205, 66);
 }
 
 #piValues {
