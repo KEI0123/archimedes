@@ -70,7 +70,7 @@ document.getElementById('sidesSlider').addEventListener('wheel', function (event
     const delta = Math.sign(event.deltaY);
     const slider = document.getElementById('sidesSlider');
     let value = parseInt(slider.value);
-    value = Math.max(3, Math.min(100, value - delta));
+    value = Math.max(slider.min, Math.min(slider.max, value - delta));
     slider.value = value;
     document.getElementById('sidesValue').innerText = value;
 });
